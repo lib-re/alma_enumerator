@@ -1,10 +1,8 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 from settings import range_seperator
+
+from bs4 import BeautifulSoup
 import requests
 import re
-from bs4 import BeautifulSoup
 
   ############################################           
  # Functions for getting record information #

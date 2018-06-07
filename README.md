@@ -13,6 +13,11 @@ chronology fields.
 * External dependencies
     * [Requests](http://requests.readthedocs.io/en/master/) 
     * [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/)
+    
+Install via the following:
+```
+$ pip3 install -r requirements.txt
+```
 
 ## Usage
 First make sure your settings are correct in `settings.py`, including the API
@@ -29,7 +34,7 @@ chronology data out of item description fields, run `ae_fetch` or `ae fetch`.
 To update items' enumeration and chronology fields, run `ae_update` or 
 `ae update`.
 
-`ae_fetch` saves the information it gets to a CSV file. It is always a good idea
+`python ae_fetch.py` saves the information it gets to a CSV file. It is always a good idea
 to check `ae_fetch`'s output to make sure the data it has extracted from the item
 descriptions is correct. The CSV file can be loaded into a spreadsheet 
 application for easier viewing. If you do load it into a spreadsheet app, it's 
@@ -48,7 +53,7 @@ Then verify that your records updated correctly in Alma.
 If you'd rather pass ae_fetch and ae_update command line arguments instead of
 updating settings.py each time you make change `mms_id`, you can.
 
-`ae_fetch` accepts:
+`python ae_fetch.py` accepts:
 
     ae_fetch [-m | --mms-id <mms>] [-o | --output-file <of>] [-e | --error-file <ef>] [-a | --api-key <api>]
 
@@ -57,7 +62,7 @@ So you could specify an mms_id by typing `ae_fetch -m 999999999999999999` or
 provided while using settings.py for the output and error files and the API 
 key.
 
-`ae_update` accepts:
+`python ae_update` accepts:
 
     ae_update [(-m | --mms-id) <mms>] [(-i | --input-file) <if>] [(-a | --api-key) <api>]
                                                       
@@ -72,7 +77,7 @@ an IDE like Spyder or PyCharm that will allow you to open and then run
 If you're feeling daring you can also batch process files without checking the output
 of `ae_fetch`, you can use `ae_batch` or `ae batch`. 
 
-`ae_batch` accepts:
+`python ae_batch` accepts:
     ae_batch [-i | --input-file <if>] [-o | --output-file <of>] [-e | --error-file <ef>] (-a | --api-key <api>] <lf>      
 
 Instead of taking a single MMS ID, ae_batch takes a file with one bibliographic 
