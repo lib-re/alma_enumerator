@@ -1,7 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-from tkinter import Tk, N, W, E, S, StringVar, INSERT, ttk, filedialog
+from Tkinter import Tk, N, W, E, S, StringVar, INSERT, ttk, filedialog
 
 import settings
 from AE import fetch, update

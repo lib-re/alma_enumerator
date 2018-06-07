@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Usage: ae_batch [-i input_file_name] [-o output_file_name] [-e error_file_name] [-a api_key] mms_id_list_file_name
 

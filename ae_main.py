@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 from settings import api_key, mms_id, output_file, error_file, input_file, base_url
 from AE import fetch, update
 from subprocess import run
@@ -33,7 +31,7 @@ if args.api_key is not None:
 if args.command == 'gui':
     run('ae_gui')
 
-if  args.command == 'fetch':
+if args.command == 'fetch':
     fetch(mms_id, output_file, error_file, api_key, base_url)
 
 if args.command == 'update':
